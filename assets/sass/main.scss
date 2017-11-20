@@ -1,0 +1,16 @@
+.l{
+	background: white;
+	width: 50%;
+	height: 100vh;
+
+}
+
+.r{
+	background: black;
+	width: 50%;
+	height: 0vh;
+	transition: all .4s ease-in-out;
+	&.t{
+		height: 100vh;
+	}
+}
