@@ -66,12 +66,28 @@ section {
         width: 50%;
         height: 100%;
         float: left;
+        transition: all 1s ease-in-out;
+        color: white;
+        a {
+            &.back {
+                position: absolute;
+                top: 5%;
+                left: 10%;
+                color: white;
+                text-decoration: none;
+                opacity: 0;
+                transition: all .333s ease-in-out;
+                &.o{
+                	opacity: 1;
+                }
+            }
+        }
+
         .stl {
             position: absolute;
             top: 30%;
             left: 10%;
-            transform: translateY(-50%);
-            color: white;
+            transform: translateY(-50%); // color: white;
             .link {
                 display: block;
                 opacity: 0;
@@ -123,12 +139,12 @@ section {
             top: 80%;
             right: 0%;
             transform: translateY(-50%);
-            transition: all .78s ease-in-out 2s;
+            transition: all .9s ease-in-out 2s;
             font-size: 28px;
             .icon-c {
                 color: white;
                 opacity: 0;
-                transition: all 2.25s ease 2s;
+                transition: all 1.4s ease-in-out 2s;
                 .linkedin {
                     background-image: url('../images/linkedin.svg');
                     background-size: contain;
@@ -137,13 +153,13 @@ section {
                     width: 50px;
                     margin: 15px 0px;
                 }
-                a{
-                	div{
-                		transition: all .2s ease-in-out;
-                		&:hover{
-                			transform: scale(1.2);
-                		}
-                	}
+                a {
+                    div {
+                        transition: all .2s ease-in-out;
+                        &:hover {
+                            transform: scale(1.2);
+                        }
+                    }
                 }
                 .email {
                     background-image: url('../images/mail.svg');

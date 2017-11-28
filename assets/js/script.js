@@ -1,9 +1,12 @@
 $(document).ready(function() {
+    let state = 0;
+    let mainSection = $('.main');
+
     const rightSide = document.querySelector('.r');
     rightSide.classList.add('t');
 
     const fadeInLinks = function() {
-    	$('.link').addClass('f');
+        $('.link').addClass('f');
         // $('.link').each(function(fadeInDiv) {
         //     $(this).delay(fadeInDiv * 1500).addClass('f');
         //     // console.log("going");
@@ -12,25 +15,50 @@ $(document).ready(function() {
 
 
     $(".link").on('click', function(event) {
-    	console.log($(this).data().link);
+        // console.log($(this).data());
 
-        // if (this.hash !== "") {
-        //     // Prevent default anchor click behavior
-        //     event.preventDefault();
+        switch ($(this).data().link) {
+            case "about":
+                state = 1;
+                console.log(state);
+                showAbout();
+                break;
+            case "projects":
+                state = 2;
+                console.log(state);
+                showProjects();
+                break;
+            case "resume":
+                state = 3;
+                console.log(state);
+                showResume();
+                break;
+            default:
 
-        //     // Store hash
-        //     var hash = this.hash;
+                state = 0;
+                break;
+        }
 
-        //     $('html, body').animate({
-        //         scrollTop: $(hash).offset().top
-        //     }, 800, function() {
-
-        //         window.location.hash = hash;
-        //     });
-        // }
-
+        if (state !== 0) {
+            $('.back').addClass('o');
+        }
     });
 
-    // setTimeout(fadeInLinks,4000);
+});
 
-})
+let clearAll = () => {
+    mainSection.removeClass()
+};
+
+let showAbout = () => {
+	clearAll();
+
+}
+
+let showProjects = () => {
+	clearAll();
+}
+
+let showResume = () => {
+	clearAll();
+}
