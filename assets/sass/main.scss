@@ -1,5 +1,9 @@
 @import './partials/normalize';
 @import './variable-mixins/colors';
+@import './components/about.scss';
+@import './components/projects.scss';
+@import './components/resume.scss';
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 
@@ -33,6 +37,7 @@ section {
     height: 100vh;
     width: 100%;
     background: $bl;
+    transition: all .2s ease-in-out;
     &:after {
         content: '';
         display: block;
@@ -48,6 +53,7 @@ section {
         right: 0;
         text-align: center;
         z-index: 2;
+        transition: all .5s ease-in-out .2s;
         .first {
             color: white;
         }
@@ -77,8 +83,28 @@ section {
                 text-decoration: none;
                 opacity: 0;
                 transition: all .333s ease-in-out;
-                &.o{
-                	opacity: 1;
+                &.o {
+                    opacity: 1;
+                    transition: all .333s ease-in-out 2.5s;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    width: 0;
+                    background: transparent;
+                    transition: width .5s ease, background-color .5s ease;
+                    /* .5 seonds for changes to the width and background-color */
+                    -webkit-transition: width .5s ease, background-color .5s ease;
+                    /* Chrome and Safari */
+                    -moz-transition: width .5s ease, background-color .5s ease;
+                    /* FireFox */
+                }
+            }
+            &:hover {
+                &:after {
+                    width: 100%;
+                    background: white;
                 }
             }
         }
@@ -88,6 +114,7 @@ section {
             top: 30%;
             left: 10%;
             transform: translateY(-50%); // color: white;
+            transition: all .5s ease-in-out .2s;
             .link {
                 display: block;
                 opacity: 0;
@@ -129,8 +156,8 @@ section {
         background: white;
         width: 50%;
         height: 0vh;
-        opacity: 0;
-        transition: all 1s ease-in-out;
+        opacity: .8;
+        transition: all 1s ease-in-out 1.25s;
         float: right;
         z-index: 0;
 
@@ -144,7 +171,7 @@ section {
             .icon-c {
                 color: white;
                 opacity: 0;
-                transition: all 1.4s ease-in-out 2s;
+                transition: all 1.25s ease-in-out 0s;
                 .linkedin {
                     background-image: url('../images/linkedin.svg');
                     background-size: contain;
@@ -190,11 +217,13 @@ section {
         &.t {
             opacity: 1;
             height: 100%; // transition: all .66 ease .2s;
+            transition: all 1s ease-in-out 0s;
             .contact {
                 right: 10%;
 
                 .icon-c {
                     opacity: 1;
+                    transition: all 1.4s ease-in-out 2.5s;
                 }
             }
         }
@@ -216,4 +245,5 @@ section {
         position: absolute;
         background: $sal;
     }
+
 }

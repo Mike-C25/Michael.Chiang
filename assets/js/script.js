@@ -1,6 +1,10 @@
+let mainSection = $('.main');
+let rightSection = $('.r');
+let leftSection = $('.l');
+
 $(document).ready(function() {
     let state = 0;
-    let mainSection = $('.main');
+  
 
     const rightSide = document.querySelector('.r');
     rightSide.classList.add('t');
@@ -47,18 +51,23 @@ $(document).ready(function() {
 });
 
 let clearAll = () => {
-    mainSection.removeClass()
+    mainSection.removeClass('a p r');
+    rightSection.removeClass('t');
 };
 
 let showAbout = () => {
 	clearAll();
-
+	mainSection.addClass('a');
 }
 
 let showProjects = () => {
 	clearAll();
+	mainSection.addClass('p');
+
 }
 
 let showResume = () => {
 	clearAll();
+	mainSection.addClass('r');
+
 }
