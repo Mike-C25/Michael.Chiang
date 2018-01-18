@@ -114,7 +114,7 @@ section {
             top: 30%;
             left: 10%;
             transform: translateY(-50%); // color: white;
-            transition: all .5s ease-in-out .2s;
+            transition: all .3s ease-in-out .2s;
             .link {
                 display: block;
                 opacity: 0;
@@ -157,7 +157,7 @@ section {
         width: 50%;
         height: 0vh;
         opacity: .8;
-        transition: all 1s ease-in-out 1.25s;
+        transition: all .85s ease-in-out 1.25s;
         float: right;
         z-index: 0;
 
