@@ -1,0 +1,33 @@
+.main {
+    &.re {
+        background: white;
+        .name {
+            opacity: 0;
+        }
+        .stl {
+            opacity: 0;
+        }
+        .l {
+            background: transparent;
+            transition-delay: 2s;
+        }
+        .back.o {
+            color: black;
+            &:hover:after {
+                background: black;
+            }
+        }
+        section.resume {
+            visibility: visible;
+            opacity: 1;
+            transition: all .25s ease-in-out;
+            transition-delay: 3.25s;
+            .container {
+            	.re-img{
+            		visibility: visible;
+            		opacity: 1;
+            	}
+            }
+        }
+    }
+}
