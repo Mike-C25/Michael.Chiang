@@ -11,6 +11,9 @@
             background: transparent;
             transition-delay: 2s;
         }
+        .r{
+        	height: 0vh;
+        }
         .back.o {
             color: black;
             &:hover:after {
