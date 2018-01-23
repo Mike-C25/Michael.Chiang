@@ -51,7 +51,7 @@ $(document).ready(function() {
 });
 
 let clearAll = () => {
-    mainSection.removeClass('a p r');
+    mainSection.removeClass('a p re');
     rightSection.removeClass('t');
 };
 
@@ -68,6 +68,6 @@ let showProjects = () => {
 
 let showResume = () => {
 	clearAll();
-	mainSection.addClass('r');
+	mainSection.addClass('re');
 
 }

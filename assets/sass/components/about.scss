@@ -1,0 +1,31 @@
+.main {
+    &.a {
+        background: $sal;
+        .name {
+            opacity: 0;
+        }
+        .stl {
+            opacity: 0;
+        }
+        .l {
+            background: transparent;
+            transition-delay: 2s;
+        }
+        section.about {
+            visibility: visible;
+            opacity: 1;
+            transition: all .33s ease-in-out;
+            transition-delay: 3.25s;
+            .container {
+                position: relative;
+                top: 50%;
+                padding: 25px;
+                transform: translateY(-50%);
+                border: 1px solid white;
+                border-top: none;
+                color: white;
+                opacity: 1;
+            }
+        }
+    }
+}
