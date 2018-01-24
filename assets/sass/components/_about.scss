@@ -9,7 +9,7 @@
         }
         .l {
             background: transparent;
-            transition-delay: 2s;
+            transition: all .5s ease-in-out 1.5s;
         }
         section.about {
             visibility: visible;

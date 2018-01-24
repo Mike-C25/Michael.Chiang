@@ -11,8 +11,8 @@
             background: transparent;
             transition-delay: 2s;
         }
-        .r{
-        	height: 0vh;
+        .r {
+            height: 0vh;
         }
         .back.o {
             color: black;
@@ -24,13 +24,14 @@
             visibility: visible;
             opacity: 1;
             transition: all .25s ease-in-out;
-            transition-delay: 3.25s;
+            transition-delay: 3s;
             .container {
-            	.re-img{
-            		visibility: visible;
-            		opacity: 1;
-            	}
+                .re-img {
+                    visibility: visible;
+                    opacity: 1;
+                }
             }
+
         }
     }
 }
