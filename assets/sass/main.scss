@@ -13,6 +13,13 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    @media screen and (max-width: 768px) {
+        overflow: auto;
+    }
 }
 
 
@@ -23,8 +30,8 @@ body {
     }
 }
 
-a{
-	cursor: crosshair;
+a {
+    cursor: crosshair;
 }
 
 
@@ -68,6 +75,9 @@ section {
         h1 {
 
             display: inline-block;
+            @media screen and(max-width: 768px) {
+                font-size: 1em;
+            }
         }
     }
     .l {
@@ -80,7 +90,7 @@ section {
         transition: all 1s ease-in-out;
         color: white;
         a {
-        	cursor: crosshair;
+            cursor: crosshair;
             &.back {
                 position: absolute;
                 top: 5%;
@@ -187,7 +197,7 @@ section {
                     margin: 15px 0px;
                 }
                 a {
-                	cursor: pointer;
+                    cursor: pointer;
                     div {
                         transition: all .2s ease-in-out;
                         &:hover {
@@ -264,15 +274,22 @@ section {
                 visibility: hidden;
                 opacity: 0;
                 display: block;
-                background: url('../../assets/images/michael.chiangresume.jpg');
+                background: url('../../assets/images/resume.svg');
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
                 height: calc(100vh);
                 width: 85%;
                 margin: 0px auto;
+                margin-top: 50px;
                 transition: all .2s ease-in-out;
                 transition-delay: 1.5s;
+                @media screen and(max-width: 768px) {
+                    background-size: cover;
+                    width: 150%;
+                    margin: 0px auto;
+                    margin-top: 50px;
+                }
             }
         }
     }
@@ -319,6 +336,9 @@ section {
     left: -100%;
     right: 0;
     background: $gr;
+    @media screen and(max-width: 768px) {
+        min-height: 170vh;
+    }
     .fluid-f {
         width: 100%;
         height: 100%;

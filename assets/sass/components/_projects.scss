@@ -4,7 +4,7 @@
         transition: all .7s ease-in-out;
         &:before {}
         .name {
-			visibility: hidden;
+            visibility: hidden;
             opacity: 0;
         }
         .stl {
@@ -23,13 +23,13 @@
             transition: all .75s ease-in-out;
             transition-delay: 2.75s;
             left: 0;
-            a{
-            	text-decoration: none;
-            	color: $gr;
-            	transition: color .2s ease-in-out;
-            	&:hover{
-            		color: purple;
-            	}
+            a {
+                text-decoration: none;
+                color: $gr;
+                transition: color .2s ease-in-out;
+                &:hover {
+                    color: purple;
+                }
             }
 
             .card-container {
@@ -38,11 +38,15 @@
                 height: calc(100vh - 100px);
                 top: 95px;
                 position: relative;
-                grid-template-columns: 45% 45%;
+                grid-template-columns: 50% 50%;
                 grid-template-rows: 30% 30% 30%;
                 grid-column-gap: 25px;
                 grid-row-gap: 20px;
                 justify-content: center;
+                @media screen and(max-width: 768px) {
+                    grid-template-columns: 100%;
+                    grid-template-rows: auto;
+                }
             }
             .card {
                 background: rgba(255, 255, 255, 0.9);
@@ -50,7 +54,7 @@
                 box-shadow: 1px 3px 9px 0px green;
                 transition: all .33s ease;
                 cursor: crosshair;
-				padding: 0px 30px;
+                padding: 0px 30px;
                 &:hover {
                     box-shadow: none;
                     transform: translateX(1px)translateY(1px);
@@ -58,26 +62,46 @@
                 &.ept {
                     grid-column: 1;
                     grid-row: 1;
+                    @media screen and(max-width: 768px) {
+                        grid-column: 1;
+                        grid-row: 1;
+                    }
                 }
                 &.ep {
 
                     grid-column: 2;
                     grid-row: 1;
+                    @media screen and(max-width: 768px) {
+                        grid-column: 1;
+                        grid-row: 2;
+                    }
                 }
                 &.hg {
 
                     grid-column: 1;
                     grid-row: 2;
+                    @media screen and(max-width: 768px) {
+                        grid-column: 1;
+                        grid-row: 3;
+                    }
                 }
                 &.rc {
 
                     grid-column: 2;
                     grid-row: 2;
+                    @media screen and(max-width: 768px) {
+                        grid-column: 1;
+                        grid-row: 4;
+                    }
                 }
                 &.bu {
 
                     grid-column: 1;
                     grid-row: 3;
+                    @media screen and(max-width: 768px) {
+                        grid-column: 1;
+                        grid-row: 5;
+                    }
                 }
             }
         }
