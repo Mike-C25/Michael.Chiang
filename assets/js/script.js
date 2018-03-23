@@ -24,17 +24,17 @@ $(document).ready(function() {
         switch ($(this).data().link) {
             case "about":
                 state = 1;
-                console.log(state);
+                // console.log(state);
                 showAbout();
                 break;
             case "projects":
                 state = 2;
-                console.log(state);
+                // console.log(state);
                 showProjects();
                 break;
             case "resume":
                 state = 3;
-                console.log(state);
+                // console.log(state);
                 showResume();
                 break;
             default:
